@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connected Dots</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="function.js"></script>
+</head>
+<body>
+  
+  <canvas id="canvas" height="900px" width="900px"></canvas>
+
+  <div id="options">
+    <!--onchange calls the function when the input value changes-->
+    <span>dot number : 
+      <input type="number" id="num_dots" placeholder="0-50" min="0" max="50" onchange="getNumDots()"> 
+    </span>
+    <span>radius: 
+      <input type="number" id="rad" placeholder="0-50" min="0" max="50" onchange="getRadius()"> 
+    </span>
+    <span>line length: 
+      <input type="number" id="lineLength" placeholder="0-2550" min="0" max="2550" onchange="getLineLength()"> 
+    </span>
+    <span>dot color:
+      <input type="color" id="dotColor" value="#FFFFFF" onchange="getDotColor()">
+    </span>
+    <span>line color:
+      <input type="color" id="lineColor" value="#FFFFFF" onchange="getLineColor()">
+    </span>
+    <span>randomize: 
+      <button type="button" id="randomizer" onclick="Randomize()">¯\_(ツ)_/¯</button>
+    </span>
+  </div>
+
+</body>
+</html>
