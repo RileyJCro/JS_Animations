@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="function.js"></script>
+</head>
+<body>
+    <div id="game_wrapper">
+        <div id="left_wrapper">
+            <h2 class="label">Snake Settings</h2>
+            <p>Snake Speed  <input type="number" id="snake_speed" placeholder="lower is faster" onchange="getSnakeSpeed()"></p>
+            <p>Size increase from food <input type="number" id="food_inc" placeholder="" onchange="getFoodIncrease()"></p>
+            <h2 class="label">Grid Settings</h2>
+            <p>Grid Size <input type="number" id="grid_size" placeholder="n x n , even to win" onchange="getGridSize()"></p>
+        </div>
+        <canvas id="canvas" height="900px" width="900px"></canvas>
+        <div id="right_wrapper">
+            <h2 class="label">Score</h2>
+            <p class="score" id="score"></p>
+            <h2 class="label">High</h2>
+            <h2 class="label">Score</h2>
+            <p id="high_score" class="score">0</p>
+            <h2 class="label">Colors</h2>
+            <div id="colors">
+                <p>Snake <input type="color" id="snake_color" onchange="getSnakeColor()"></p>
+                <p>Food <input type="color" id="food_color" onchange="getFoodColor()"></p>
+                <p>Grid BG <input type="color" id="grid_fill" onchange="getGridFill()"></p>
+                <p>Grid Lines <input type="color" id="grid_line_color" onchange="getGridLineColor()"></p><div id="color_wrapper">
+                <button id="random_colors" onclick="SetRandomColors()">Set Random Colors</button>
+            </div>
+        </div>
+    </div>
+    <div id="end_wrapper">
+        <h2 class="label"></h2>
+        <p class="score" id="end_score"></p>
+        <p id="end_msg">(Press enter to play again)</p>
+    </div>
+</body>
+</html>
