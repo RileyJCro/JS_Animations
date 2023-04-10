@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  /* justify-content: center; if you wanted to center the grids */
+}
+
+.grid {
+  width: 200px;
+  height: 400px;
+  /* Wraps grid blocks to fit */
+  display: flex;
+  flex-wrap: wrap; 
+  background-color: black;
+  border: 3px inset, rgba(64, 68, 64, 0.7);
+}
+
+.grid div {
+  width: 20px;
+  height: 20px;
+  /* Creates a border inside the cells without changing their size */
+  box-sizing: border-box;
+  border: 1px solid rgba(172, 158, 165, 0.5); 
+}
+
+.tet {
+  background-color: green;
+  border: none !important;
+}
+
+.taken {
+  border: none !important;
+}
+
+.mini-grid {
+  margin-left: 50px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+}
+
+.mini-grid div {
+  width: 20px;
+  height: 20px;
+}
+
+#start-button {
+  margin-top: 10px;
+}
