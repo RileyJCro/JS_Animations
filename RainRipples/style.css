@@ -1,0 +1,67 @@
+#canvas {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(43, 37, 37);
+  color:rgb(125, 148, 168);
+}
+
+:root {
+  --r4_width: 60px;
+  --r4_height: 30px;
+  --r4_margin: calc(var(--r4_height)/2 * -1) calc(var(--r4_width)/2 * -1);
+  --r3_width: 60px;
+  --r3_height: 30px;
+  --r3_margin: calc(var(--r3_height)/2 * -1) calc(var(--r3_width)/2* -1);
+  --r2_width: 100px;
+  --r2_height: 50px;
+  --r2_margin: calc(var(--r2_height)/2 * -1) calc(var(--r2_width)/2 * -1);
+  --r1_width: 140px;
+  --r1_height: 70px;
+  --r1_margin: calc(var(--r1_height)/2 * -1) calc(var(--r1_width)/2 * -1);
+}
+
+/* The negative margins of half the change in size keeps the ripples centered */
+
+@keyframes ripple4 {
+  to {
+    width: var(--r4_width);
+    height: var(--r4_height);
+    opacity: 0.01;
+    margin: var(--r4_margin);
+  }
+}
+
+@keyframes ripple3 {
+  to {
+    width: var(--r3_width);
+    height: var(--r3_height);
+    opacity: 0.01;
+    margin: var(--r3_margin);
+  }
+}
+
+@keyframes ripple2 {
+  to {
+    width: var(--r2_width);
+    height: var(--r2_height);
+    opacity: 0.01;
+    margin: var(--r2_margin);
+  }
+}
+
+@keyframes ripple1 {
+  to {
+    width: var(--r1_width);
+    height: var(--r1_height);
+    opacity: 0.01;
+    margin: var(--r1_margin);
+  }
+}
+
+.ripples {
+  width: 0;
+  height: 0;
+  position: fixed;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
